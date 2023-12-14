@@ -9,7 +9,7 @@ app = App()
 
 @app.startup
 def set_secret(state):
-    state['secret'] = os.getenv('APP_SECRET', 'dev')
+    state.setdefault('secret', os.getenv('APP_SECRET', 'dev'))
 
 
 @app.before

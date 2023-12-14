@@ -2,11 +2,11 @@
 
 Session support for µHTTP
 
-Sessions are implemented as [Javascript Web Signatures](https://datatracker.ietf.org/doc/html/rfc7519). Which means that:
+Sessions are implemented as [Javascript Web Signatures](https://datatracker.ietf.org/doc/html/rfc7515). Which means that:
 
 1. Sessions are stored in the client's browser.
 2. Sessions are not secret.
-3. Sessions can't be tempered with.
+3. Sessions cannot be tempered with.
 
 ### Installation
 
