@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "uhttp-session"
-version = "0.1.0"
+name = "uHTTP-Session"
+version = "0.1.1"
 description = "Session support for µHTTP"
 authors = ["gus <0x67757300@gmail.com>"]
 license = "MIT"

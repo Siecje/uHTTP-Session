@@ -23,12 +23,8 @@ def get_token(request):
                 algorithms=['HS256']
             )
         except jwt.exceptions.PyJWTError:
-            response = Response.from_any(400)
-            response.cookies['session'] = ''
-            response.cookies['session']['expires'] = time.strftime(
-                '%a, %d %b %Y %T GMT', time.gmtime(0)
-            )
-            raise response
+            request.state['session'] = {'exp': 0}
+            raise Response(400)
     else:
         request.state['session'] = {}
 
