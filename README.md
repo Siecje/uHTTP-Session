@@ -42,6 +42,7 @@ app.mount(session_app)
 @app.post('/login')
 def login(request):
     request.state['session']['user'] = request.form.get('user', 'john')
+    # ... rest of code
 
 
 @app.get('/'):
